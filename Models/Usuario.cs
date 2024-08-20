@@ -4,20 +4,16 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace PasswordService.Models
 {
     [Table("Usuario")]
-    public class User
+    public class Usuario
     {
         [Key] [Column("id_usuario")] public int IdUsuario { get; set; }
 
-        [Required]
-        [MaxLength(20)]
-        [Column("cedula_usuario")]
-        public string CedulaUsuario { get; set; }
+        [Column("cedula_usuario")] public string CedulaUsuario { get; set; }
 
-        [Required]
-        [MaxLength(150)]
-        [Column("HashContrasena")]
-        public string HashContrasena { get; set; }
+        [Column("contrasena")] public string? Contrasena { get; set; }
 
         [Column("UltimoLogin")] public DateTime? UltimoLogin { get; set; }
+
+        [Column("estadoActivo")] public bool EstadoActivo { get; set; }
     }
 }

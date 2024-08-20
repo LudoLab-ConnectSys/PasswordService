@@ -5,10 +5,11 @@ namespace PasswordService.Data
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options)
         {
         }
 
-        public DbSet<User> Usuario { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
     }
 }
